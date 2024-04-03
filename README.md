@@ -42,7 +42,7 @@ UI/UX 개발 (스코어, 아이템 상태 표시 등)
 
 
 ## 예상 게임 실행 흐름
-
+![연습용 이미지](https://github.com/minsung6747/AndroidSmartPhoneGame/commit/011c55d3892e3021baf7c12b2e72a3776c542a71)
 
 
 게임 시작 화면에서 플레이어는 시작 버튼을 클릭하여 게임을 시작합니다.
