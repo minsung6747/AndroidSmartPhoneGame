@@ -1,10 +1,10 @@
 # AndroidSmartPhoneGame
 
 
-#BirdFlight 
+# BirdFlight 
 
 
-##게임 개요
+## 게임 개요
 
 
 High Concept:BirdFlight는 비행기가 위에서 아래로 이동하면서 날아오는 새들을 총알로 격파하는 액션 게임입니다.
