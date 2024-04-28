@@ -4,10 +4,14 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+    <style name="AppTheme" parent="Theme.BirdFlight">
+        <!-- 여기에 테마 속성을 추가하세요. -->
+    </style>
+
     <style name="AppTheme.noActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-
     </style>
     <style name="Theme.BirdFlight" parent="Base.Theme.BirdFlight" />
 </resources>
+
