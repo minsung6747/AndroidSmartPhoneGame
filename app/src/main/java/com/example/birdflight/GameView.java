@@ -20,6 +20,15 @@ public class GameView extends SurfaceView implements Runnable{
             sleep();
         }
     }
+    private void update(){}
+    private void draw(){}
+    private void sleep(){
+        try {
+            Thread.sleep(17);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public void resume(){
         isPlaying =true;
