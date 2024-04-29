@@ -12,10 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BirdFlight"
         tools:targetApi="31">
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.noActionBar"
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
             android:screenOrientation="landscape"
-            android:exported="true">
+            android:theme="@style/AppTheme.noActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
