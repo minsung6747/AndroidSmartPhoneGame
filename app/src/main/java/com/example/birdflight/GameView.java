@@ -7,8 +7,18 @@ public class GameView extends SurfaceView implements Runnable{
 
     private Thread thread;
     private boolean isPlaying;
-    public GameView(Context context) {
+
+    private int screenX, screenY;
+    private Background background1, background2;
+    public GameView(Context context, int screenX, int screenY) {
         super(context);
+
+        this.screenX = screenX;
+        this.screenY = screenY;
+        background1 = new Background(screenX,screenY,getResources());
+        background2 = new Background(screenX,screenY,getResources());
+
+        background2.x =screenX;
     }
 
     @Override
@@ -20,8 +30,22 @@ public class GameView extends SurfaceView implements Runnable{
             sleep();
         }
     }
-    private void update(){}
-    private void draw(){}
+    private void update(){
+
+        background1.x -= 10;
+        background2.x -= 10;
+
+       if (background1.x + background1.backgroud.getWidth() < 0){
+            background1.x = screenX;
+       }
+        if (background2.x + background2.backgroud.getWidth() < 0){
+            background2.x = screenX;
+        }
+
+    }
+    private void draw(){
+        
+    }
     private void sleep(){
         try {
             Thread.sleep(17);
