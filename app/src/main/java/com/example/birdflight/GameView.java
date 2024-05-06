@@ -3,6 +3,7 @@ package com.example.birdflight;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.view.MotionEvent;
 import android.view.SurfaceView;
 
 public class GameView extends SurfaceView implements Runnable{
@@ -12,6 +13,7 @@ public class GameView extends SurfaceView implements Runnable{
     private int screenX, screenY;
     public static float screenRatioX, screenRatioY;
     private Paint paint;
+    private Flight flight;
     private Background background1, background2;
     public GameView(Context context, int screenX, int screenY) {
         super(context);
@@ -22,6 +24,9 @@ public class GameView extends SurfaceView implements Runnable{
         screenRatioY = 1080f / screenY;
         background1 = new Background(screenX,screenY,getResources());
         background2 = new Background(screenX,screenY,getResources());
+
+
+        flight = new Flight(screenY, getResources());
 
         background2.x = screenX;
 
@@ -50,12 +55,36 @@ public class GameView extends SurfaceView implements Runnable{
             background2.x = screenX;
         }
 
+        if(flight.isGoingUp)
+            flight.y -= 30 * screenRatioY;
+        else
+            flight.y += 30 * screenRatioY;
+
+        if (flight.y < 0)
+            flight.y = 0;
+
+        if(flight.y > screenY- flight.height)
+            flight.y = screenY - flight.height;
     }
+
+
+   // width = flight1.getWidth();
+    //height = flight1.getHeight();
+
+    //width /= 4;
+   // height /= 4;
+
+    //width *= (int) screenRatioX;
+    //height *= (int) screenRatioY;
+
     private void draw(){
        if (getHolder().getSurface().isValid()){
           Canvas canvas = getHolder().lockCanvas();
           canvas.drawBitmap(background1.backgroud,background1.x,background1.y,paint);
           canvas.drawBitmap(background2.backgroud,background2.x,background2.y,paint);
+
+
+          canvas.drawBitmap(flight.getFlight(),flight.x,flight.y,paint);
 
           getHolder().unlockCanvasAndPost(canvas);
        }
@@ -84,4 +113,20 @@ public class GameView extends SurfaceView implements Runnable{
     }
 
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+
+        switch(event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                if (event.getX() < screenX / 2) {
+                    flight.isGoingUp = true;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                flight.isGoingUp = false;
+                break;
+        }
+
+        return true;
+    }
 }
