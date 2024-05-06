@@ -8,7 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
 public class Flight {
-    int x, y, width, height;
+    int x, y, width, height, wingCounter = 0;
     Bitmap flight1, flight2;
 
     Flight(int screenY, Resources res){
@@ -24,6 +24,19 @@ public class Flight {
         width *= (int) screenRatioX;
         height *= (int) screenRatioY;
 
+        flight1 = Bitmap.createScaledBitmap(flight1, width, height, false);
+        flight2 = Bitmap.createScaledBitmap(flight2, width, height, false);
+
+        y = screenY / 2;
    }
+    Bitmap getFlight () {
+            if(wingCounter == 0){
+                wingCounter++;
+                return flight1;
+            }
+            wingCounter--;
+
+            return flight2;
+    }
 
 }
