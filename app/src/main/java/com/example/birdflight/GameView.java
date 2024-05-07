@@ -68,14 +68,6 @@ public class GameView extends SurfaceView implements Runnable{
     }
 
 
-   // width = flight1.getWidth();
-    //height = flight1.getHeight();
-
-    //width /= 4;
-   // height /= 4;
-
-    //width *= (int) screenRatioX;
-    //height *= (int) screenRatioY;
 
     private void draw(){
        if (getHolder().getSurface().isValid()){
@@ -124,6 +116,8 @@ public class GameView extends SurfaceView implements Runnable{
                 break;
             case MotionEvent.ACTION_UP:
                 flight.isGoingUp = false;
+                if(event.getX() > screenX / 2)
+                    flight.toShoot++;
                 break;
         }
 
