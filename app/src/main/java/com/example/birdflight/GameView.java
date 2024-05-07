@@ -123,4 +123,7 @@ public class GameView extends SurfaceView implements Runnable{
 
         return true;
     }
+
+    public void newBullet() {
+    }
 }
