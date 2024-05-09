@@ -164,4 +164,5 @@ UI/UX 개발 (스코어, 아이템 상태 표시 등)
 
 
 ## Commit횟수 
-
+![연습용 이미지](https://github.com/minsung6747/AndroidSmartPhoneGame/blob/main/bandicam%202024-05-09%2023-30-02-242.jpg)
+![연습용 이미지](https://github.com/minsung6747/AndroidSmartPhoneGame/blob/main/bandicam%202024-05-09%2023-30-25-413.jpg)
