@@ -17,7 +17,7 @@ public class Flight {
     Bitmap flight1, flight2, shoot1, shoot2, shoot3, shoot4, shoot5;
     private GameView gameView;
 
-    Flight (int screenY, Resources res) {
+    Flight (GameView gameView, int screenY, Resources res) {
 
         this.gameView = gameView;
 
@@ -41,6 +41,8 @@ public class Flight {
         shoot3 = BitmapFactory.decodeResource(res,R.mipmap.shoot3);
         shoot4 = BitmapFactory.decodeResource(res,R.mipmap.shoot4);
         shoot5 = BitmapFactory.decodeResource(res,R.mipmap.shoot5);
+
+
 
 
 
