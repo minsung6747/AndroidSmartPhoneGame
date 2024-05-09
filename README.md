@@ -180,3 +180,13 @@ UI/UX 개발 (스코어, 아이템 상태 표시 등)
 
 메인 레벨 
 ![연습용 이미지](https://github.com/minsung6747/AndroidSmartPhoneGame/blob/main/bandicam%202024-05-09%2023-49-22-422.jpg)
+
+
+
+
+
+
+
+
+## 간단핵심 코드 
+![연습용 이미지](https://github.com/minsung6747/AndroidSmartPhoneGame/blob/main/bandicam%202024-05-09%2023-55-07-284.jpg)
